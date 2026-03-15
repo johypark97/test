@@ -1,3 +1,4 @@
+import { Form, Link } from "react-router";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -40,6 +41,16 @@ export function Welcome() {
               ))}
             </ul>
           </nav>
+          <div>
+            <Form action="/a" method="get">
+              <input
+                type="text"
+                name="id"
+                style={{ border: "1px solid white" }}
+              />
+              <button type="submit">Go to A</button>
+            </Form>
+          </div>
         </div>
       </div>
     </main>

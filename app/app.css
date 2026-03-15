@@ -13,3 +13,10 @@ body {
     color-scheme: dark;
   }
 }
+
+a.active {
+  color: red;
+}
+a.pending {
+  color: blue;
+}

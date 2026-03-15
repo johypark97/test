@@ -2,6 +2,7 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -33,6 +34,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <nav>
+          <ul>
+            <NavLink to="/">
+              {({ isActive }) => (
+                <span className={isActive ? "active" : ""}>Home</span>
+              )}
+            </NavLink>
+          </ul>
+          <ul>
+            <NavLink to="/a">
+              {({ isActive }) => (
+                <span className={isActive ? "active" : ""}>A</span>
+              )}
+            </NavLink>
+          </ul>
+        </nav>
         {children}
         <ScrollRestoration />
         <Scripts />
